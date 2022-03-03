@@ -1,0 +1,13 @@
+.bg-header-bcp {
+  height: 80px;
+  color: #ffffff;
+  line-height: 18px;
+  background-color: #002A8D;
+}
+
+.ml-3{
+  margin-left: 12px;
+}
+.br-bcp{
+  border-radius: 12px;
+}

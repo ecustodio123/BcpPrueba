@@ -1,0 +1,40 @@
+<form class="mt-4" #f="ngForm" (ngSubmit)="f.form.valid && guardarAgencia()">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nombre de la Agencia</label>
+    <input type="text" class="form-control" placeholder="Ingresa el nombre de la agencia" name="agencia" id="agencia"
+      [(ngModel)]="agenciaInput" required>
+  </div>
+  <div class="form-group mt-2">
+    <label for="exampleInputPassword1">Provincia</label>
+    <input type="text" class="form-control" placeholder="Ingresa la provincia" name="provincia" id="provincia"
+    [(ngModel)]="provinciaInput" required>
+  </div>
+  <div class="form-group mt-2">
+    <label for="exampleInputPassword1">Departamento</label>
+    <input type="text" class="form-control" placeholder="Ingresa el departamento" name="departamento" id="departamento"
+    [(ngModel)]="departamentoInput" required>
+  </div>
+  <div class="form-group mt-2">
+    <label for="exampleInputPassword1">Distrito</label>
+    <input type="text" class="form-control" placeholder="Ingresa el distrito" name="distrito" id="distrito"
+    [(ngModel)]="distritoInput" required>
+  </div>
+  <div class="form-group mt-2">
+    <label for="exampleInputPassword1">Dirección</label>
+    <input type="text" class="form-control" placeholder="Ingresa la dirección" name="direccion" id="direccion"
+    [(ngModel)]="direccionInput" required>
+  </div>
+  <div class="form-group mt-2">
+    <label for="exampleInputPassword1">Latitud</label>
+    <input type="text" class="form-control" placeholder="Ingresa la latitud" name="latitud" id="latitud"
+    [(ngModel)]="latitudInput" required>
+  </div>
+  <div class="form-group mt-2">
+    <label for="exampleInputPassword1">Longitud</label>
+    <input type="text" class="form-control" placeholder="Ingresa la longitud" name="longitud" id="longitud"
+    [(ngModel)]="longitudInput" required>
+  </div>
+  <div class="w-100  text-end">
+    <button type="submit" class="btn btn-bcp-submit mt-3" [disabled]="!f.form.valid">{{this.index ? 'Modificar' : 'Crear'}}</button>
+  </div>
+</form>

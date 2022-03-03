@@ -1,0 +1,24 @@
+<div class="row agency-card" *ngFor="let agencia of agencias; let i = index">
+  <div class="col-2 align-self-center">
+    <img src="https://i.pinimg.com/280x280_RS/2e/45/66/2e4566fd829bcf9eb11ccdb5f252b02f.jpg" class="rounded-circle"
+      style="width: 50px;" alt="Avatar" />
+  </div>
+  <div class="col-lg-8 col-7 mt-1">
+    <p class="nombre-agencia mb-1">{{agencia.agencia}}</p>
+    <p class="nombre-distrito mb-1">{{agencia.distrito}}</p>
+    <p class="nombre-ubicacion mb-1">{{agencia.direccion}}</p>
+    <span class="nombre-ubicacion">
+      <i class="bi bi-geo-alt-fill bcp-blue"></i>
+      Lat: {{agencia.lat}}
+      Lon: {{agencia.lon}}
+    </span>
+    <!-- <app-mapa-agencia [latitud]="agencia.lat" [longitud]="agencia.lon"></app-mapa-agencia> -->
+  </div>
+  <div class="col-lg-2 col-3 align-self-center text-end">
+    <i class="cursor-pointer  bi bi-pencil mr-3" [routerLink]="['/crear-agencia', i]"></i>
+    <i class="cursor-pointer bi bi-star "></i>
+  </div>
+</div>
+<button type="button" class="btn btn-bcp test" [routerLink]="['crear-agencia']">
+  <i class="cursor-pointer bi bi-plus h2 text-black"></i>
+</button>
